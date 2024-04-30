@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <link rel="icon " type="image" hrf="ox.png">
+  <meta charset="UTF-8">
+  <title>About us</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bruno+Ace&display=swap');
+
+    /* navigation bar */
+
+    nav {
+      background-color: red;
+      height: 50px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    ul {
+      list-style: none;
+      display: flex;
+    }
+
+    li {
+      margin: 0 10px;
+    }
+
+    a {
+      color: #fff;
+      text-decoration: none;
+      text-transform: uppercase;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    a:hover {
+      color: #f5c518;
+    }
+
+    /* main */
+
+    body {
+      margin: 0%;
+      padding: 0%;
+      font-family: sans-serif;
+      background: url(newbb.jpg);
+      background-repeat: no-repeat;
+      background-size: cover;
+      color: whitesmoke;
+    }
+    #video-background {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+      min-width: 100%;
+      min-height: 100%;
+      width: auto;
+      height: auto;
+      z-index: -1000;
+      transform: scaleX(-1); 
+    }
+    h1 {
+      color: whitesmoke;
+      text-align: center;
+      font-size: 50px;
+      margin-top: 50px;
+      font-family: 'Bruno Ace', cursive;
+    }
+
+    h2 {
+      background-color: #333;
+      color: whitesmoke;
+      text-align: center;
+      font-size: 40px;
+      padding: 10px;
+    }
+
+    .container {
+      max-width: 800px;
+      border: 2px solid #333;
+      margin: auto;
+      padding: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      border-radius: 10px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      margin-top: 20px;
+      background: url(yup.mp4);
+      background: linear-gradient(45deg, rgb(5, 51, 119), rgb(10, 110, 110), rgb(123, 16, 34), white);
+      animation: fadeIn 2s ease-out;
+    }
+
+    .instructions-container {
+      max-width: 800px;
+      border: 2px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 20px;
+      background: rgba(0, 0, 0, 0.7);
+      background: url(yup.mp4);
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      background: linear-gradient(45deg, rgb(5, 51, 119), rgb(10, 110, 110), rgb(123, 16, 34), white);
+    }
+
+    .paragraph {
+      font-size: 25px;
+      line-height: 40px;
+    }
+
+    .footer {
+      display: flex;
+      justify-content: center;
+      font-size: 20px;
+      background-color: #e82a2a;
+      margin-top: 20px;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    footer p {
+      font-size: 25px;
+    }
+
+    /* Animation */
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Welcome to Bigboss OTT</h1>
+    
+  <!-- Google Translate Element -->
+  <div id="google_translate_element"></div>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+  <!-- Google Translate Initialization Script -->
+  <script>
+  function googleTranslateElementInit() {
+      new google.translate.TranslateElement(
+          { pageLanguage: 'en' }, 'google_translate_element'
+      );
+  }
+  </script>
+
+  <!-- Call Initialization Function -->
+  <script>
+  googleTranslateElementInit();
+  </script>
+
+  <nav>
+    <ul>
+      <li><a href="rindex.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <a href="https://www.jiocinema.com/tv-shows/bigg-boss-ott/3499624">Watch</a>
+      <li><a href="index.html">Logout!</a></li>
+    </ul>
+  </nav>
+
+  <h1>Bigg Boss Voting Zone</h1>
+
+  <div class="container">
+    <h2>About Us</h2>
+    <video id="video-background" autoplay muted loop>
+      <source src="yup.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <p class="paragraph">Welcome to the Big Boss Voting Zone, your go-to destination for all the latest updates and
+      insights about the popular reality show Big Boss. We are a team of dedicated professionals who are passionate
+      about bringing you the most accurate and up-to-date information about the show, its contestants, and the voting
+      process.
+
+      Our mission is to provide a platform for fans of the show to engage with each other, share their opinions, and
+      vote for their favorite contestants. We believe that the Big Boss Voting Zone is not just a place to vote for
+      your favorite housemate, but also a community that fosters discussion and camaraderie among fans.
+
+      We strive to make the voting process as easy and accessible as possible, so that every fan can participate and
+      make their voice heard. Our team works tirelessly to ensure that the results of the voting are fair and
+      transparent, and that every vote counts.
+
+      Thank you for choosing the Big Boss Voting Zone as your source for all things Big Boss. We hope you enjoy your
+      experience here, and look forward to seeing your favorite contestant win!</p>
+  </div>
+
+  <div class="container instructions-container">
+    <h2>Instructions</h2>
+    <p class="paragraph">Bigg Boss is a popular reality TV show in India where contestants live together in a house
+      and are eliminated through a voting system. Here are the steps for voting:<br><br>
+
+      1. The voting for Bigg Boss is usually done through the website, so you need to download the visit their
+      website.<br>
+
+      2. Once you have accessed the website, you need to create an account. You can either sign up using your email
+      address.<br>
+
+      3. After creating the account, you need to search for "Bigg Boss" in the search bar of the website.<br>
+
+      4. Once you have found the Bigg Boss page, you will see the list of contestants who are currently in the
+      house.<br>
+
+      5. To vote for your favorite contestant, you need to click on the "Vote" button next to their name.<br>
+
+      6. You will then be asked to confirm your vote, and you will have to use your available votes to support your
+      chosen contestant.<br>
+
+      7. It is important to note that the voting window usually opens after the episode is aired, and it remains open
+      for a limited period of time. So, make sure to cast your vote within the specified time frame.<br><br>
+
+      That's it! These are the instructions for voting in Bigg Boss.
+    </p>
+  </div>
+
+  <footer>
+    <div class="footer">
+      <p id="h">copyright &copy; <a href="#"> Bigg Boss Voting Zone</a></p>
+    </div>
+  </footer>
+
+</body>
+
+</html>

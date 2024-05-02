@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/64d58efce2.js"
+      crossorigin="anonymous"
+    ></script>
+    <link rel="stylesheet" href="style.css" />
+    <title>Sign in & Sign up Form</title>
+  </head>
+  <body>
+    <nav>
+      <a href="nindex.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="https://www.jiocinema.com/tv-shows/bigg-boss-ott/3499624" target="_blank">Watch</a>
+      <a href="feedback.html">Contact</a>
+      <span id="userEmail" style="display:none;"></span>
+    </nav>
+      <video autoplay muted loop>
+        <source src="download.gif" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    <div class="container">
+      <div class="forms-container">
+        <div class="marquee-container">
+          <div class="marquee-content">
+            <h1><img src="slidingpicture22.jpeg" alt="salman"><img src="salman.jpeg"><img src="slidingpicture22.jpeg" alt="salman"><img src="salman.jpeg"></h1>
+          </div>
+        </div>
+        <div class="signin-signup">
+          <form action="vote.html" class="sign-in-form">
+            <h2 class="title">Sign in</h2>
+            <div class="input-field">
+              <i class="fa fa-user" aria-hidden="true"></i>
+              <input type="text" placeholder="Username" />
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" />
+            </div>
+            <input type="submit" value="Login" class="btn solid" />
+            <p class="social-text">Or watch on social platforms</p>
+            <div class="social-media">
+              <a href="https://www.facebook.com/groups/3423037418020794/?_rdc=1&_rdr" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="https://twitter.com/BiggBoss" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="https://www.jiocinema.com/tv-shows/bigg-boss-ott/3499624" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="https://www.linkedin.com/company/bigg-boss/" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+          <form action="vote.html" class="sign-up-form">
+            <h2 class="title">Sign up</h2>
+            <div class="input-field">
+              <i class="fas fa-user"></i>
+              <input type="text" placeholder="Username" id="Username"  name="Username"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-envelope"></i>
+              <input type="email" placeholder="Email" id="Email"  name="email"/>
+            </div>
+            <div class="input-field">
+              <i class="fas fa-lock"></i>
+              <input type="password" placeholder="Password" id="pwd" name="pwd" />
+            </div>
+            <input type="submit" class="btn" value="Sign up" />
+            <p class="social-text">Or watch on social platforms</p>
+            <div class="social-media">
+              <a href="#" class="social-icon">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-google"></i>
+              </a>
+              <a href="#" class="social-icon">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <div class="panels-container">
+        <div class="panel left-panel">
+          <div class="content">
+            <h3>New here ?</h3>
+            <p>
+              Bigg Boss is a reality television show that originated in the Netherlands and has been adapted in various countries, including India. The Indian version, known as "Bigg Boss," follows a unique format where a group of celebrity contestants, living together and, are constantly monitored by cameras. The show is known for its drama, and the challenges faced by contestants while being isolated from the outside world.
+            </p>
+            <button class="btn transparent" id="sign-up-btn">
+              Sign up
+            </button>
+          </div>
+          <img src="eye.jpg" class="image" alt="" />
+        </div>
+        <div class="panel right-panel">
+          <div class="content">
+            <h3>One of us ?</h3>
+            <p>
+              Bigg Boss is a reality television show that originated in the Netherlands and has been adapted in various countries, including India. The Indian version, known as "Bigg Boss," follows a unique format where a group of celebrity contestants, living together in a purpose-built house, are constantly monitored by cameras. The show is known for its drama, entertainment, and the challenges faced by contestants while being isolated from the outside world.
+            </p>
+            <button class="btn transparent" id="sign-in-btn">
+              Sign in
+            </button>
+          </div>
+          <img src="l.svg" class="image" alt="" />
+        </div>
+      </div>
+    </div>
+    <script src="kso.js"></script>
+    <script>
+      // JavaScript to change the background after a certain time (2 seconds in this example)
+      setTimeout(function() {
+        document.body.classList.remove('image1');
+        document.body.classList.add('image2');
+      }, 2000);
+    </script>
+    
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      const signUpForm = document.querySelector('.sign-up-form');
+      const signInForm = document.querySelector('.sign-in-form');
+
+      // Event listener for sign up form submission
+      signUpForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const username = signUpForm.querySelector('input[placeholder="Username"]').value;
+        const email = signUpForm.querySelector('input[placeholder="Email"]').value;
+        const password = signUpForm.querySelector('input[placeholder="Password"]').value;
+
+        // Check if the username or email already exist
+        const existingUsername = localStorage.getItem('username');
+        const existingEmail = localStorage.getItem('email');
+
+        if (existingUsername === username || existingEmail === email) {
+          alert('You are already signed up with this username or email. Please use different credentials.');
+        } else {
+          // Store the signup data in local storage (this is not secure for sensitive information)
+          localStorage.setItem('username', username);
+          localStorage.setItem('email', email);
+          localStorage.setItem('password', password);
+
+          // You can redirect to a different page or perform other actions after signup
+          alert('Signup successful!');
+        }
+      });
+
+      // Event listener for sign in form submission
+      signInForm.addEventListener('submit', function (event) {
+        event.preventDefault();
+
+        const enteredUsername = signInForm.querySelector('input[placeholder="Username"]').value;
+        const enteredPassword = signInForm.querySelector('input[placeholder="Password"]').value;
+
+        // Retrieve signup data from local storage
+        const storedUsername = localStorage.getItem('username');
+        const storedPassword = localStorage.getItem('password');
+
+        // Check if entered username and password match the stored values
+        if (enteredUsername === storedUsername && enteredPassword === storedPassword) {
+          // You can redirect to a different page or perform other actions after signin
+          window.location.href = 'vote.html';
+          // stored email
+          document.getElementById('userEmail').innerText = storedEmail;
+          document.getElementById('userEmail').style.display = 'inline';
+          alert('Login successful!');
+        } else {
+          alert('Incorrect username or password. Please try again.');
+        }
+      });
+    });
+    
+  </script>
+
+  </body>
+</html>

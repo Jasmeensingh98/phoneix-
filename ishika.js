@@ -1,4 +1,7 @@
 <script>
+
+
+
 const progressBar = document.getElementById('progress');
 
 let progressValue = 0;

@@ -1,4 +1,7 @@
 <script>
+
+
+
 const progressBar = document.getElementById('progress');
 
 let progressValue = 0;
@@ -9,6 +12,7 @@ function increaseProgress() {
   // Update the progress bar width
   progressBar.style.width = `${progressValue}%`;
 
+  
   // Check if progress is complete
   if (progressValue >= 100) {
     clearInterval(progressInterval); // Stop the interval

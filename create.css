@@ -7,11 +7,9 @@
     font-family: 'Poppins';
     outline:none ;
     border:none ;
-
-}
 html{
     font-size: 62.5%;
-    overflow-x: hidden;
+    overflow-x: hidden ;
 }
 
 .header{
